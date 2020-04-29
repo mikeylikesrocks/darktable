@@ -1,0 +1,11 @@
+#! /bin/bash
+
+
+_term() {
+  s6-pause -t -i
+}
+
+trap _term SIGTERM
+
+# Run guacd
+/usr/sbin/guacd -f -b 0.0.0.0 -l 4822

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "******** darktable cleanup *********"
+
+rm /config/.config/darktable/*.lock
+
+export DISPLAY=:10
+
+xdotool key alt+F4
+
+
+echo "******** Finished darktable cleanup *********"
+
+exit 0 
